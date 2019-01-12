@@ -46,5 +46,7 @@ void loop(void) {
   float temperatureF = (temperatureC * 9.0 / 5.0) + 32.0;
   Serial.print(temperatureF); Serial.println(" degrees F");
  
-  delay(1000);
+  s2m = 60
+  minutes = 5
+  delay(minutes * s2m * 1000);
 }
