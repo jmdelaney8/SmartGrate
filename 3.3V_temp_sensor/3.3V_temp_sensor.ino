@@ -44,7 +44,8 @@ void loop(void) {
  
   // now convert to Fahrenheight
   float temperatureF = (temperatureC * 9.0 / 5.0) + 32.0;
-  Serial.print(temperatureF); Serial.println(" degrees F");
+  Serial.print(temperatureF);
+  //Serial.println(" degrees F");
  
   unsigned long s2m = 60;
   unsigned long minutes = 5;
