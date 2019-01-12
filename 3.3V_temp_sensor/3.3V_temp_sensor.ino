@@ -26,21 +26,21 @@ void loop(void) {
   
   tempReading = analogRead(tempPin);  
  
-  Serial.print("Temp reading = ");
-  Serial.print(tempReading);     // the raw analog reading
+  //Serial.print("Temp reading = ");
+  // Serial.print(tempReading);     // the raw analog reading
  
   // converting that reading to voltage, which is based off the reference voltage
   float voltage = tempReading * aref_voltage;
   voltage /= 1024.0; 
  
   // print out the voltage
-  Serial.print(" - ");
-  Serial.print(voltage); Serial.println(" volts");
+  //Serial.print(" - ");
+  //Serial.print(voltage); Serial.println(" volts");
  
   // now print out the temperature
   float temperatureC = (voltage - 0.5) * 100 ;  //converting from 10 mv per degree wit 500 mV offset
                                                //to degrees ((volatge - 500mV) times 100)
-  Serial.print(temperatureC); Serial.println(" degrees C");
+  //Serial.print(temperatureC); Serial.println(" degrees C");
  
   // now convert to Fahrenheight
   float temperatureF = (temperatureC * 9.0 / 5.0) + 32.0;
