@@ -1,7 +1,12 @@
 import serial
 import datetime as dt
+import sys
 
-ser = serial.Serial('/dev/ttyACM0', 9600)
+device = sys.argv[1]
+if device is None:
+    device = '/dev/ttyACM0'
+
+ser = serial.Serial(device, 9600)
 ser.baudrate = 9600
 ser.write(b'10')
 s = [0]
