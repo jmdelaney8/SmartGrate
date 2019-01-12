@@ -3,8 +3,8 @@
   */
  
 #define aref_voltage 3.3         // we tie 3.3V to ARef and measure it with a multimeter!
- 
- 
+#define SECOND 1000L
+
  
  
 //TMP36 Pin Variables
@@ -46,7 +46,9 @@ void loop(void) {
   float temperatureF = (temperatureC * 9.0 / 5.0) + 32.0;
   Serial.print(temperatureF); Serial.println(" degrees F");
  
-  s2m = 60
-  minutes = 5
-  delay(minutes * s2m * 1000);
+  long s2m = 60;
+  long minutes = 5;
+  long seconds = minutes * s2m;
+  //Serial.print(seconds * SECOND);
+  delay(seconds * SECOND);
 }
